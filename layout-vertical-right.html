@@ -74,18 +74,49 @@
 	  #chart-tasks-overview .apexcharts-bar-series rect {
     fill: linear-gradient(180deg, rgba(188, 155, 99, 0.75) 0%, #01051D 100%);
 }
-
+.br{
+	border-radius: 20px;
+}
+.bld{
+	font-size: 16px;
+	font-weight: 900;
+}
     </style>
   </head>
   <body >
     <script src="./dist/js/demo-theme.min.js?1684106062"></script>
 	
-    <div class="page">
-      <!-- Sidebar -->
 	
-      <aside class="navbar side-navbar navbar-vertical navbar-right navbar-expand-lg">
+    <div class="page">
+<!------------------ topbar--------------------------- -->
+
+<header class="navbar-expand-md  w-100 border border-dark bg-dark sticky-top p-0">
+	<div class=" bg-dark p-0">
+	  <div class=" bg-dark p-0">
+		<div class="container-xl d-flex p-2 justify-content-between align-items-center bg-dark">
+		 <button class="bg-white border-0 rounded" style="height: 44px;">
+			<svg width="26" height="32" viewBox="0 0 26 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M25.667 15.709C25.667 15.2946 25.5024 14.8972 25.2093 14.6041C24.9163 14.3111 24.5189 14.1465 24.1045 14.1465L12.2451 14.1465L15.8389 10.5684C15.9853 10.4231 16.1016 10.2503 16.1809 10.0599C16.2602 9.86948 16.3011 9.66525 16.3011 9.45899C16.3011 9.25272 16.2602 9.04849 16.1809 8.85809C16.1016 8.66768 15.9853 8.49487 15.8389 8.34961C15.6936 8.20316 15.5208 8.08692 15.3304 8.00759C15.14 7.92827 14.9358 7.88743 14.7295 7.88743C14.5232 7.88743 14.319 7.92827 14.1286 8.00759C13.9382 8.08692 13.7654 8.20316 13.6201 8.34961L7.37012 14.5996C7.22787 14.7482 7.11636 14.9234 7.04199 15.1152C6.88571 15.4956 6.88571 15.9223 7.04199 16.3027C7.11636 16.4945 7.22787 16.6698 7.37012 16.8184L13.6201 23.0684C13.7658 23.214 13.9388 23.3296 14.1291 23.4085C14.3194 23.4873 14.5235 23.5279 14.7295 23.5279C14.9355 23.5279 15.1395 23.4873 15.3299 23.4085C15.5202 23.3296 15.6932 23.214 15.8389 23.0684C15.9846 22.9227 16.1001 22.7497 16.179 22.5594C16.2578 22.369 16.2984 22.165 16.2984 21.959C16.2984 21.753 16.2578 21.5489 16.179 21.3586C16.1001 21.1682 15.9846 20.9953 15.8389 20.8496L12.2451 17.2715L24.1045 17.2715C24.5189 17.2715 24.9163 17.1069 25.2093 16.8138C25.5024 16.5208 25.667 16.1234 25.667 15.709ZM5.35449 31.334L20.9795 31.334C22.2227 31.334 23.415 30.8401 24.2941 29.961C25.1731 29.082 25.667 27.8897 25.667 26.6465L25.667 21.959C25.667 21.5446 25.5024 21.1472 25.2093 20.8541C24.9163 20.5611 24.5189 20.3965 24.1045 20.3965C23.6901 20.3965 23.2927 20.5611 22.9996 20.8541C22.7066 21.1472 22.542 21.5446 22.542 21.959L22.542 26.6465C22.542 27.0609 22.3774 27.4583 22.0843 27.7513C21.7913 28.0444 21.3939 28.209 20.9795 28.209L5.35449 28.209C4.94009 28.209 4.54266 28.0444 4.24964 27.7513C3.95661 27.4583 3.79199 27.0609 3.79199 26.6465L3.79199 4.77149C3.79199 4.35709 3.95661 3.95966 4.24964 3.66663C4.54266 3.37361 4.94009 3.20899 5.35449 3.20899L20.9795 3.20899C21.3939 3.20899 21.7913 3.37361 22.0843 3.66663C22.3774 3.95966 22.542 4.35709 22.542 4.77149L22.542 9.45899C22.542 9.87339 22.7066 10.2708 22.9996 10.5638C23.2927 10.8569 23.6901 11.0215 24.1045 11.0215C24.5189 11.0215 24.9163 10.8569 25.2093 10.5638C25.5024 10.2708 25.667 9.87339 25.667 9.45899L25.667 4.77149C25.667 3.52828 25.1731 2.336 24.2941 1.45692C23.415 0.577847 22.2227 0.0839863 20.9795 0.0839863L5.35449 0.0839863C4.11129 0.0839863 2.919 0.577847 2.03993 1.45692C1.16085 2.336 0.666992 3.52828 0.666992 4.77149L0.666992 26.6465C0.666992 27.8897 1.16085 29.082 2.03993 29.961C2.919 30.8401 4.11129 31.334 5.35449 31.334Z" fill="#0D1418"/>
+				</svg>
+				
+
+				Disconnecting from the system
+				
+		 </button>
+		  <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
+			<div>
+				<img src="logo (1).svg" alt="" height="60px" width="149px">
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </header>
+
+      <!-- Sidebar -->
+      <aside class="navbar side-navbar navbar-vertical navbar-right navbar-expand-lg border border-dark overflow-hidden" style="top:77px">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu" aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"   aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <h1 class="navbar-brand navbar-brand-autodark">
@@ -214,13 +245,13 @@
           </div>
         </div>
       </aside>
-      <div class="page-wrapper bg-light">
+      <div class="page-wrapper bg">
         <!-- Page header -->
 	
 		  <header class="navbar-expand-md  w-100 border border-dark">
 			<div class="collapse navbar-collapse " id="navbar-menu">
 			  <div class="navbar bg">
-				<div class="container-xl bg">
+				<div class="container-xl bg ">
 				 <button class="bg-white border-0 rounded">
 					<svg width="34" height="39" viewBox="0 0 34 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M17.0938 6.79416C17.7578 6.79416 19.3354 7.21406 19.3354 7.21406C23.6094 8.19347 26.6177 12.1302 26.6177 16.575V28.5386L27.4916 29.4165L28.2217 30.1499H5.77831L6.50844 29.4165L7.38228 28.5386V16.575C7.38228 12.1303 10.3906 8.19347 14.6646 7.21406C14.6646 7.21406 16.3561 6.79416 16.9062 6.79416M17 0C15.3498 0 14.0882 1.26731 14.0882 2.925V4.28991C8.55556 5.55769 4.38228 10.6275 4.38228 16.575V27.3L0.5 31.2V33.15H33.5V31.2L29.6177 27.3V16.575C29.6177 10.6275 25.4443 5.55769 19.9118 4.28991V2.925C19.9118 1.26731 18.6502 0 17 0ZM20.8823 35.1H13.1176C13.1176 37.2451 14.8645 39 17 39C19.1355 39 20.8823 37.2451 20.8823 35.1Z" fill="black"/>
@@ -237,8 +268,8 @@
 			</div>
 		  </header>
         <!-- Page body -->
-        <div class="page-body">
-				<div class="container-xl">
+        <div class="page-body ">
+				<div class="container-xl d-flex flex-column gap-4 bg">
 				  <div class="row row-deck row-cards">
 				
 
@@ -318,7 +349,59 @@
 						  </div>
 						</div>
 					  </div>
-					
+					  <div class="col-12 bg d-flex justify-content-between">
+						<div class="col-5 bg-white d-flex flex-column gap-2 p-2 br">
+						<h5 class="text-end bld">Recent messages</h5>
+
+							<div class="card p-0 br bg border-0 ">
+								<div class="card-body p-2" >
+                                 <div class="d-flex justify-content-between align-items-center ">
+									<span>
+										<svg width="44" height="36" viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M31.0732 0C38.0786 0.0195713 43.7523 5.2424 43.7736 11.6911V14.6139L43.7594 14.8073C43.6569 15.5032 43.0089 16.0396 42.2248 16.0396L42.2054 16.004L41.9617 15.9862C41.6412 15.9392 41.3426 15.8003 41.1102 15.5864C40.8198 15.319 40.6566 14.9563 40.6566 14.5782V11.6911C40.6041 6.83909 36.3441 2.91759 31.0732 2.86931H12.7003C7.42949 2.91759 3.16945 6.83909 3.117 11.6911V24.3089C3.16945 29.1609 7.42949 33.0824 12.7003 33.1307H31.0732C36.3441 33.0824 40.6041 29.1609 40.6566 24.3089C40.7452 23.5782 41.4163 23.0255 42.2151 23.0255C43.0138 23.0255 43.685 23.5782 43.7736 24.3089C43.7523 30.7576 38.0786 35.9804 31.0732 36H12.7003C5.69056 35.9902 0.0106613 30.7617 0 24.3089V11.6911C0 5.23428 5.68614 0 12.7003 0H31.0732ZM9.39914 10.7739C9.80682 10.7336 10.215 10.8458 10.532 11.0851L19.6313 17.7149C20.768 18.5358 22.3667 18.5358 23.5034 17.7149L32.5059 11.0851H32.5253L32.7151 10.9658C33.3691 10.6162 34.2189 10.7452 34.713 11.299C34.9719 11.596 35.091 11.976 35.0437 12.3543C34.9964 12.7326 34.7867 13.0778 34.4613 13.3129L25.4588 19.9604C23.1697 21.6561 19.9069 21.6561 17.6179 19.9604L8.59596 13.3129L8.42938 13.1671C7.92064 12.6519 7.87921 11.86 8.36364 11.299C8.61838 11.0033 8.99146 10.8141 9.39914 10.7739Z" fill="#01051D"/>
+											</svg>
+											
+									</span>
+									<p class="m-0"><span class="bld">Subject:</span> System error</p>
+									<p class="m-0"><span class="bld">Sender's name:</span> Chaim </p>
+								 </div>
+                                </div>
+							</div>
+							<div class="card p-0 br bg border-0 ">
+								<div class="card-body p-2" >
+                                 <div class="d-flex justify-content-between align-items-center ">
+									<span>
+										<svg width="44" height="36" viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M31.0732 0C38.0786 0.0195713 43.7523 5.2424 43.7736 11.6911V14.6139L43.7594 14.8073C43.6569 15.5032 43.0089 16.0396 42.2248 16.0396L42.2054 16.004L41.9617 15.9862C41.6412 15.9392 41.3426 15.8003 41.1102 15.5864C40.8198 15.319 40.6566 14.9563 40.6566 14.5782V11.6911C40.6041 6.83909 36.3441 2.91759 31.0732 2.86931H12.7003C7.42949 2.91759 3.16945 6.83909 3.117 11.6911V24.3089C3.16945 29.1609 7.42949 33.0824 12.7003 33.1307H31.0732C36.3441 33.0824 40.6041 29.1609 40.6566 24.3089C40.7452 23.5782 41.4163 23.0255 42.2151 23.0255C43.0138 23.0255 43.685 23.5782 43.7736 24.3089C43.7523 30.7576 38.0786 35.9804 31.0732 36H12.7003C5.69056 35.9902 0.0106613 30.7617 0 24.3089V11.6911C0 5.23428 5.68614 0 12.7003 0H31.0732ZM9.39914 10.7739C9.80682 10.7336 10.215 10.8458 10.532 11.0851L19.6313 17.7149C20.768 18.5358 22.3667 18.5358 23.5034 17.7149L32.5059 11.0851H32.5253L32.7151 10.9658C33.3691 10.6162 34.2189 10.7452 34.713 11.299C34.9719 11.596 35.091 11.976 35.0437 12.3543C34.9964 12.7326 34.7867 13.0778 34.4613 13.3129L25.4588 19.9604C23.1697 21.6561 19.9069 21.6561 17.6179 19.9604L8.59596 13.3129L8.42938 13.1671C7.92064 12.6519 7.87921 11.86 8.36364 11.299C8.61838 11.0033 8.99146 10.8141 9.39914 10.7739Z" fill="#01051D"/>
+											</svg>
+											
+									</span>
+									<p class="m-0"><span class="bld">Subject:</span> System error</p>
+									<p class="m-0"><span class="bld">Sender's name:</span> Chaim </p>
+								 </div>
+                                </div>
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="card p-2 br">
+						<h5 class="text-end bld">Product order graph</h5>
+
+								<div class="card-body p-2">
+								  <div id="chart-demo-pie"></div>
+								</div>
+							  </div>
+						</div>
+						<div class="col-3">
+							<div class="card p-2 br">
+						<h5 class="text-end bld">Voucher types chart</h5>
+
+								<div class="card-body p-2">
+								  <div id="chart-demo-pie2"></div>
+								</div>
+							  </div>
+						</div>
+
+					  </div>
 					</div>
         </div>
      
@@ -333,6 +416,118 @@
     <!-- Tabler Core -->
     <script src="./dist/js/tabler.min.js?1684106062" defer></script>
     <script src="./dist/js/demo.min.js?1684106062" defer></script>
+	<script>
+		// @formatter:off
+		document.addEventListener("DOMContentLoaded", function () {
+			window.ApexCharts && (new ApexCharts(document.getElementById('chart-demo-pie'), {
+				chart: {
+					type: "pie",
+					fontFamily: 'inherit',
+					height: 240,
+					sparkline: {
+						enabled: true
+					},
+					animations: {
+						enabled: false
+					},
+				},
+				fill: {
+					opacity: 1,
+				},
+				series: [25, 18, 29, 30],
+				labels: ["interchangeability", "Shirts", "pants", "ties"],
+				tooltip: {
+					theme: 'dark'
+				},
+				grid: {
+					strokeDashArray: 4,
+				},
+				colors: ['rgba(99,188,183,0.8)', 'rgba(1,5,29,0.8)', 'rgba(157,0,0,0.8)', 'rgba(11,93,139,0.8)'],
+				legend: {
+					show: true,
+					position: 'bottom',
+					offsetY: 12,
+					markers: {
+						width: 10,
+						height: 10,
+						radius: 100,
+					},
+					itemMargin: {
+						horizontal: 8,
+						vertical: 8
+					},
+				},
+				dataLabels: {
+                enabled: true,
+                formatter: function (val, opts) {
+                    return opts.w.globals.series[opts.seriesIndex] + "%"
+                },
+				
+            },
+				tooltip: {
+					fillSeriesColor: false
+				},
+			})).render();
+		});
+		// @formatter:on
+	  </script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.ApexCharts && (new ApexCharts(document.getElementById('chart-demo-pie2'), {
+			chart: {
+				type: "pie",
+				fontFamily: 'inherit',
+				height: 240,
+				sparkline: {
+					enabled: true
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [25, 18, 29, 30],
+			labels: ["interchangeability", "Shirts", "pants", "ties"],
+			tooltip: {
+				theme: 'dark'
+			},
+			grid: {
+				strokeDashArray: 4,
+			},
+			colors: ['rgba(188,155,99,0.8)', 'rgba(239,239,239,0.8)', 'rgba(0,59,76,0.8)', 'rgba(13,20,24,0.8)'],
+
+
+			legend: {
+				show: true,
+				position: 'bottom',
+				offsetY: 12,
+				markers: {
+					width: 10,
+					height: 10,
+					radius: 100,
+				},
+				itemMargin: {
+					horizontal: 8,
+					vertical: 8
+				},
+			},
+			dataLabels: {
+			enabled: true,
+			formatter: function (val, opts) {
+				return opts.w.globals.series[opts.seriesIndex] + "%"
+			},
+			
+		},
+			tooltip: {
+				fillSeriesColor: false
+			},
+		})).render();
+	});
+	// @formatter:on
+  </script>
     <script>
       // @formatter:off
       document.addEventListener("DOMContentLoaded", function () {
@@ -460,6 +655,7 @@
       });
       // @formatter:on
     </script>
+	
     <script>
 		// @formatter:off
 		document.addEventListener("DOMContentLoaded", function () {
