@@ -1,0 +1,830 @@
+<!doctype html>
+<!--
+* Tabler - Premium and Open Source dashboard template with responsive and high quality UI.
+* @version 1.0.0-beta19
+* @link https://tabler.io
+* Copyright 2018-2023 The Tabler Authors
+* Copyright 2018-2023 codecalm.net Paweł Kuna
+* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Dashboard - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.</title>
+    <!-- CSS files -->
+    <link href="./dist/css/tabler.min.css?1684106062" rel="stylesheet"/>
+    <link href="./dist/css/tabler-flags.min.css?1684106062" rel="stylesheet"/>
+    <link href="./dist/css/tabler-payments.min.css?1684106062" rel="stylesheet"/>
+    <link href="./dist/css/tabler-vendors.min.css?1684106062" rel="stylesheet"/>
+    <link href="./dist/css/demo.min.css?1684106062" rel="stylesheet"/>
+    <style>
+      @import url('https://rsms.me/inter/inter.css');
+      :root {
+      	--tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+      }
+      body {
+      	font-feature-settings: "cv03", "cv04", "cv11";
+      }
+	  .bg{
+        background-color: #EFEFEF !important;
+
+	  }
+      .side-nav-item {
+        /* border: 1px solid #ccc; */
+        border-radius: 10px;
+        background-color: white;
+        text-align: right;
+      }
+      .side-navbar-nav{
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 0px;
+      }
+      .side-navbar{
+      }
+      .side-nav-link{
+        justify-content: flex-end !important;
+        padding: 0% !important;
+        gap: 10px;
+
+      }
+      .side-nav-link-icon{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        height: 50px !important;
+        width: 58px !important;
+        margin: 0px;
+        border-radius: 0 10px 10px 0;
+
+      }
+      .side-nav-link-title{
+       font-weight: 300;
+       font-size: 20px;
+       line-height: 25px;
+      }
+	  #chart-tasks-overview .apexcharts-bar-series rect {
+    fill: linear-gradient(180deg, rgba(188, 155, 99, 0.75) 0%, #01051D 100%);
+}
+.br{
+	border-radius: 20px;
+}
+.bld{
+	font-size: 16px;
+	font-weight: 900;
+}
+@media (min-width: 992px) {
+    .md-w {
+        width: 80%;
+    }
+	.mq-t{
+		top:77px !important;
+        width: 20% !important;
+        background-color: #EFEFEF !important;
+	}
+	
+}
+@media (max-width: 991px) {
+	.mq-t{
+	background-color: inherit;
+	border: none !important;
+       /* width: 40px; */
+	   z-index: 10;
+	}
+	.md-w {
+        top: -60px !important;
+		position: relative;
+    }
+}
+    </style>
+  </head>
+  <body >
+    <script src="./dist/js/demo-theme.min.js?1684106062"></script>
+	
+	
+    <div class="page">
+<!------------------ topbar--------------------------- -->
+
+<header class="navbar-expand-md  w-100 border border-dark bg-dark sticky-top p-0">
+	<div class=" bg-dark p-0">
+	  <div class=" bg-dark p-0">
+		<div class="container-xl d-flex p-2 justify-content-between align-items-center bg-dark">
+		 <button class="bg-white border-0 rounded" style="height: 44px;">
+			<svg width="26" height="32" viewBox="0 0 26 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M25.667 15.709C25.667 15.2946 25.5024 14.8972 25.2093 14.6041C24.9163 14.3111 24.5189 14.1465 24.1045 14.1465L12.2451 14.1465L15.8389 10.5684C15.9853 10.4231 16.1016 10.2503 16.1809 10.0599C16.2602 9.86948 16.3011 9.66525 16.3011 9.45899C16.3011 9.25272 16.2602 9.04849 16.1809 8.85809C16.1016 8.66768 15.9853 8.49487 15.8389 8.34961C15.6936 8.20316 15.5208 8.08692 15.3304 8.00759C15.14 7.92827 14.9358 7.88743 14.7295 7.88743C14.5232 7.88743 14.319 7.92827 14.1286 8.00759C13.9382 8.08692 13.7654 8.20316 13.6201 8.34961L7.37012 14.5996C7.22787 14.7482 7.11636 14.9234 7.04199 15.1152C6.88571 15.4956 6.88571 15.9223 7.04199 16.3027C7.11636 16.4945 7.22787 16.6698 7.37012 16.8184L13.6201 23.0684C13.7658 23.214 13.9388 23.3296 14.1291 23.4085C14.3194 23.4873 14.5235 23.5279 14.7295 23.5279C14.9355 23.5279 15.1395 23.4873 15.3299 23.4085C15.5202 23.3296 15.6932 23.214 15.8389 23.0684C15.9846 22.9227 16.1001 22.7497 16.179 22.5594C16.2578 22.369 16.2984 22.165 16.2984 21.959C16.2984 21.753 16.2578 21.5489 16.179 21.3586C16.1001 21.1682 15.9846 20.9953 15.8389 20.8496L12.2451 17.2715L24.1045 17.2715C24.5189 17.2715 24.9163 17.1069 25.2093 16.8138C25.5024 16.5208 25.667 16.1234 25.667 15.709ZM5.35449 31.334L20.9795 31.334C22.2227 31.334 23.415 30.8401 24.2941 29.961C25.1731 29.082 25.667 27.8897 25.667 26.6465L25.667 21.959C25.667 21.5446 25.5024 21.1472 25.2093 20.8541C24.9163 20.5611 24.5189 20.3965 24.1045 20.3965C23.6901 20.3965 23.2927 20.5611 22.9996 20.8541C22.7066 21.1472 22.542 21.5446 22.542 21.959L22.542 26.6465C22.542 27.0609 22.3774 27.4583 22.0843 27.7513C21.7913 28.0444 21.3939 28.209 20.9795 28.209L5.35449 28.209C4.94009 28.209 4.54266 28.0444 4.24964 27.7513C3.95661 27.4583 3.79199 27.0609 3.79199 26.6465L3.79199 4.77149C3.79199 4.35709 3.95661 3.95966 4.24964 3.66663C4.54266 3.37361 4.94009 3.20899 5.35449 3.20899L20.9795 3.20899C21.3939 3.20899 21.7913 3.37361 22.0843 3.66663C22.3774 3.95966 22.542 4.35709 22.542 4.77149L22.542 9.45899C22.542 9.87339 22.7066 10.2708 22.9996 10.5638C23.2927 10.8569 23.6901 11.0215 24.1045 11.0215C24.5189 11.0215 24.9163 10.8569 25.2093 10.5638C25.5024 10.2708 25.667 9.87339 25.667 9.45899L25.667 4.77149C25.667 3.52828 25.1731 2.336 24.2941 1.45692C23.415 0.577847 22.2227 0.0839863 20.9795 0.0839863L5.35449 0.0839863C4.11129 0.0839863 2.919 0.577847 2.03993 1.45692C1.16085 2.336 0.666992 3.52828 0.666992 4.77149L0.666992 26.6465C0.666992 27.8897 1.16085 29.082 2.03993 29.961C2.919 30.8401 4.11129 31.334 5.35449 31.334Z" fill="#0D1418"/>
+				</svg>
+				
+
+				<span class="d-none d-md-inline-flex">Disconnecting from the system</span>
+				
+		 </button>
+		  <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
+			<div>
+				<img src="logo (1).svg" alt="" height="60px" width="149px">
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </header>
+
+      <!-- Sidebar -->
+ 
+      <div class="page-wrapper bg col-12 " >
+        <!-- Page header -->
+	
+		
+        <!-- Page body -->
+        <div class="page-body ">
+			<div class="container col-12 d-flex flex-column gap-6 justify-content-center align-items-center">
+				<div class="topSection">
+					<h1 class="text-3xl m-0" style="font-size: 60px; line-height: 61.6px;">ברוך הבא, משה</h1>
+					<p class="text-center font-weight-light text-2xl" style="font-size: 30px; line-height: 41.6px;">אנא בחר באפשרות הרצויה</p>
+				</div>
+				<div class="cards flex-wrap col-12 flex-column flex-lg-row d-flex gap-4 align-items-center justify-content-center"  >
+					<div class="card col-10 col-lg-5 bg-dark  d-flex p-2 justify-content-center align-items-center br" style="height: 397px;">
+                    
+                            <h1 class="m-0 text-center" style="color: #BC9B63; font-weight: 800; font-size: 60px; line-height: 81.6px;">למערכת ניהול פורים  לחץ כאן ←</h1>
+                           
+                        
+                    </div>
+					<div class="card col-10 col-lg-5 d-flex p-2 justify-content-center  align-items-center br" style="height: 397px; background-color: #BC9B63;">
+                    
+						<h1 class="m-0 text-center" style="font-weight: 800; font-size: 60px; line-height: 81.6px;">למערכת ניהול התת לחץ כאן ←</h1>
+					   
+					
+				</div>
+			
+            
+				</div>
+			</div>
+        </div>
+     
+      </div>
+    </div>
+  
+    <!-- Libs JS -->
+    <script src="./dist/libs/apexcharts/dist/apexcharts.min.js?1684106062" defer></script>
+    <script src="./dist/libs/jsvectormap/dist/js/jsvectormap.min.js?1684106062" defer></script>
+    <script src="./dist/libs/jsvectormap/dist/maps/world.js?1684106062" defer></script>
+    <script src="./dist/libs/jsvectormap/dist/maps/world-merc.js?1684106062" defer></script>
+    <!-- Tabler Core -->
+    <script src="./dist/js/tabler.min.js?1684106062" defer></script>
+    <script src="./dist/js/demo.min.js?1684106062" defer></script>
+	<script>
+		// @formatter:off
+		document.addEventListener("DOMContentLoaded", function () {
+			window.ApexCharts && (new ApexCharts(document.getElementById('chart-demo-pie'), {
+				chart: {
+					type: "pie",
+					fontFamily: 'inherit',
+					height: 240,
+					sparkline: {
+						enabled: true
+					},
+					animations: {
+						enabled: false
+					},
+				},
+				fill: {
+					opacity: 1,
+				},
+				series: [25, 18, 29, 30],
+				labels: ["interchangeability", "Shirts", "pants", "ties"],
+				tooltip: {
+					theme: 'dark'
+				},
+				grid: {
+					strokeDashArray: 4,
+				},
+				colors: ['rgba(99,188,183,0.8)', 'rgba(1,5,29,0.8)', 'rgba(157,0,0,0.8)', 'rgba(11,93,139,0.8)'],
+				legend: {
+					show: true,
+					position: 'bottom',
+					offsetY: 12,
+					markers: {
+						width: 10,
+						height: 10,
+						radius: 100,
+					},
+					itemMargin: {
+						horizontal: 8,
+						vertical: 8
+					},
+				},
+				dataLabels: {
+                enabled: true,
+                formatter: function (val, opts) {
+                    return opts.w.globals.series[opts.seriesIndex] + "%"
+                },
+				
+            },
+				tooltip: {
+					fillSeriesColor: false
+				},
+			})).render();
+		});
+		// @formatter:on
+	  </script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.ApexCharts && (new ApexCharts(document.getElementById('chart-demo-pie2'), {
+			chart: {
+				type: "pie",
+				fontFamily: 'inherit',
+				height: 240,
+				sparkline: {
+					enabled: true
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [25, 18, 29, 30],
+			labels: ["interchangeability", "Shirts", "pants", "ties"],
+			tooltip: {
+				theme: 'dark'
+			},
+			grid: {
+				strokeDashArray: 4,
+			},
+			colors: ['rgba(188,155,99,0.8)', 'rgba(239,239,239,0.8)', 'rgba(0,59,76,0.8)', 'rgba(13,20,24,0.8)'],
+
+
+			legend: {
+				show: true,
+				position: 'bottom',
+				offsetY: 12,
+				markers: {
+					width: 10,
+					height: 10,
+					radius: 100,
+				},
+				itemMargin: {
+					horizontal: 8,
+					vertical: 8
+				},
+			},
+			dataLabels: {
+			enabled: true,
+			formatter: function (val, opts) {
+				return opts.w.globals.series[opts.seriesIndex] + "%"
+			},
+			
+		},
+			tooltip: {
+				fillSeriesColor: false
+			},
+		})).render();
+	});
+	// @formatter:on
+  </script>
+    <script>
+      // @formatter:off
+      document.addEventListener("DOMContentLoaded", function () {
+      	window.ApexCharts && (new ApexCharts(document.getElementById('chart-revenue-bg'), {
+      		chart: {
+      			type: "area",
+      			fontFamily: 'inherit',
+      			height: 40.0,
+      			sparkline: {
+      				enabled: true
+      			},
+      			animations: {
+      				enabled: false
+      			},
+      		},
+      		dataLabels: {
+      			enabled: false,
+      		},
+      		fill: {
+      			opacity: .16,
+      			type: 'solid'
+      		},
+      		stroke: {
+      			width: 2,
+      			lineCap: "round",
+      			curve: "smooth",
+      		},
+      		series: [{
+      			name: "Profits",
+      			data: [37, 35, 44, 28, 36, 24, 65, 31, 37, 39, 62, 51, 35, 41, 35, 27, 93, 53, 61, 27, 54, 43, 19, 46, 39, 62, 51, 35, 41, 67]
+      		}],
+      		tooltip: {
+      			theme: 'dark'
+      		},
+      		grid: {
+      			strokeDashArray: 4,
+      		},
+      		xaxis: {
+      			labels: {
+      				padding: 0,
+      			},
+      			tooltip: {
+      				enabled: false
+      			},
+      			axisBorder: {
+      				show: false,
+      			},
+      			type: 'datetime',
+      		},
+      		yaxis: {
+      			labels: {
+      				padding: 4
+      			},
+      		},
+      		labels: [
+      			'2020-06-20', '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24', '2020-06-25', '2020-06-26', '2020-06-27', '2020-06-28', '2020-06-29', '2020-06-30', '2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-05', '2020-07-06', '2020-07-07', '2020-07-08', '2020-07-09', '2020-07-10', '2020-07-11', '2020-07-12', '2020-07-13', '2020-07-14', '2020-07-15', '2020-07-16', '2020-07-17', '2020-07-18', '2020-07-19'
+      		],
+      		colors: [tabler.getColor("primary")],
+      		legend: {
+      			show: false,
+      		},
+      	})).render();
+      });
+      // @formatter:on
+    </script>
+    <script>
+      // @formatter:off
+      document.addEventListener("DOMContentLoaded", function () {
+      	window.ApexCharts && (new ApexCharts(document.getElementById('chart-new-clients'), {
+      		chart: {
+      			type: "line",
+      			fontFamily: 'inherit',
+      			height: 40.0,
+      			sparkline: {
+      				enabled: true
+      			},
+      			animations: {
+      				enabled: false
+      			},
+      		},
+      		fill: {
+      			opacity: 1,
+      		},
+      		stroke: {
+      			width: [2, 1],
+      			dashArray: [0, 3],
+      			lineCap: "round",
+      			curve: "smooth",
+      		},
+      		series: [{
+      			name: "May",
+      			data: [37, 35, 44, 28, 36, 24, 65, 31, 37, 39, 62, 51, 35, 41, 35, 27, 93, 53, 61, 27, 54, 43, 4, 46, 39, 62, 51, 35, 41, 67]
+      		},{
+      			name: "April",
+      			data: [93, 54, 51, 24, 35, 35, 31, 67, 19, 43, 28, 36, 62, 61, 27, 39, 35, 41, 27, 35, 51, 46, 62, 37, 44, 53, 41, 65, 39, 37]
+      		}],
+      		tooltip: {
+      			theme: 'dark'
+      		},
+      		grid: {
+      			strokeDashArray: 4,
+      		},
+      		xaxis: {
+      			labels: {
+      				padding: 0,
+      			},
+      			tooltip: {
+      				enabled: false
+      			},
+      			type: 'datetime',
+      		},
+      		yaxis: {
+      			labels: {
+      				padding: 4
+      			},
+      		},
+      		labels: [
+      			'2020-06-20', '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24', '2020-06-25', '2020-06-26', '2020-06-27', '2020-06-28', '2020-06-29', '2020-06-30', '2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-05', '2020-07-06', '2020-07-07', '2020-07-08', '2020-07-09', '2020-07-10', '2020-07-11', '2020-07-12', '2020-07-13', '2020-07-14', '2020-07-15', '2020-07-16', '2020-07-17', '2020-07-18', '2020-07-19'
+      		],
+      		colors: [tabler.getColor("primary"), tabler.getColor("gray-600")],
+      		legend: {
+      			show: false,
+      		},
+      	})).render();
+      });
+      // @formatter:on
+    </script>
+	
+    <script>
+		// @formatter:off
+		document.addEventListener("DOMContentLoaded", function () {
+			window.ApexCharts && (new ApexCharts(document.getElementById('chart-tasks-overview'), {
+				chart: {
+					type: "bar",
+					fontFamily: 'inherit',
+					height: 320,
+					parentHeightOffset: 0,
+					toolbar: {
+						show: false,
+					},
+					animations: {
+						enabled: false
+					},
+				},
+				plotOptions: {
+					bar: {
+						columnWidth: '50%',
+					}
+					
+				},
+				dataLabels: {
+					enabled: false,
+				},
+				fill: {
+					opacity: 1,
+				},
+				series: [{
+					name: "A",
+					data: [44, 32, 48, 72, 60, 16, 44, 32, 78, 50, 68, 34]
+				}],
+				tooltip: {
+					theme: 'dark'
+				},
+				grid: {
+					padding: {
+						top: -20,
+						right: 0,
+						left: -4,
+						bottom: -4
+					},
+					strokeDashArray: 0,
+				},
+				xaxis: {
+					labels: {
+						padding: 0,
+					},
+					tooltip: {
+						enabled: false
+					},
+					axisBorder: {
+						show: false,
+					},
+					categories: [
+    'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+    'September', 'October', 'November', 'December'
+],
+				},
+				yaxis: {
+  labels: {
+    formatter: function (value) {
+      return value *100+ " " + "NIS";
+    }
+  },
+},
+			  fill: {
+                type: 'gradient',
+                gradient: {
+                    shade: 'dark',
+                    type: 'vertical',
+                    shadeIntensity: 0.5,
+                    inverseColors: true,
+                    stops: [0, 50, 100],
+                    colorStops: [
+                        {
+                            offset: 0,
+                            color: 'rgba(188, 155, 99, 0.75)',
+                            opacity: 1
+                        },
+                        {
+                            offset: 100,
+                            color: '#01051D',
+                            opacity: 1
+                        }
+                    ]
+                }
+            },
+				legend: {
+					show: false,
+				},
+			})).render();
+		});
+		// @formatter:on
+	  </script>
+    <script>
+      // @formatter:on
+      document.addEventListener("DOMContentLoaded", function() {
+      	const map = new jsVectorMap({
+      		selector: '#map-world',
+      		map: 'world',
+      		backgroundColor: 'transparent',
+      		regionStyle: {
+      			initial: {
+      				fill: tabler.getColor('body-bg'),
+      				stroke: tabler.getColor('border-color'),
+      				strokeWidth: 2,
+      			}
+      		},
+      		zoomOnScroll: false,
+      		zoomButtons: false,
+      		// -------- Series --------
+      		visualizeData: {
+      			scale: [tabler.getColor('bg-surface'), tabler.getColor('primary')],
+      			values: { "AF": 16, "AL": 11, "DZ": 158, "AO": 85, "AG": 1, "AR": 351, "AM": 8, "AU": 1219, "AT": 366, "AZ": 52, "BS": 7, "BH": 21, "BD": 105, "BB": 3, "BY": 52, "BE": 461, "BZ": 1, "BJ": 6, "BT": 1, "BO": 19, "BA": 16, "BW": 12, "BR": 2023, "BN": 11, "BG": 44, "BF": 8, "BI": 1, "KH": 11, "CM": 21, "CA": 1563, "CV": 1, "CF": 2, "TD": 7, "CL": 199, "CN": 5745, "CO": 283, "KM": 0, "CD": 12, "CG": 11, "CR": 35, "CI": 22, "HR": 59, "CY": 22, "CZ": 195, "DK": 304, "DJ": 1, "DM": 0, "DO": 50, "EC": 61, "EG": 216, "SV": 21, "GQ": 14, "ER": 2, "EE": 19, "ET": 30, "FJ": 3, "FI": 231, "FR": 2555, "GA": 12, "GM": 1, "GE": 11, "DE": 3305, "GH": 18, "GR": 305, "GD": 0, "GT": 40, "GN": 4, "GW": 0, "GY": 2, "HT": 6, "HN": 15, "HK": 226, "HU": 132, "IS": 12, "IN": 1430, "ID": 695, "IR": 337, "IQ": 84, "IE": 204, "IL": 201, "IT": 2036, "JM": 13, "JP": 5390, "JO": 27, "KZ": 129, "KE": 32, "KI": 0, "KR": 986, "KW": 117, "KG": 4, "LA": 6, "LV": 23, "LB": 39, "LS": 1, "LR": 0, "LY": 77, "LT": 35, "LU": 52, "MK": 9, "MG": 8, "MW": 5, "MY": 218, "MV": 1, "ML": 9, "MT": 7, "MR": 3, "MU": 9, "MX": 1004, "MD": 5, "MN": 5, "ME": 3, "MA": 91, "MZ": 10, "MM": 35, "NA": 11, "NP": 15, "NL": 770, "NZ": 138, "NI": 6, "NE": 5, "NG": 206, "NO": 413, "OM": 53, "PK": 174, "PA": 27, "PG": 8, "PY": 17, "PE": 153, "PH": 189, "PL": 438, "PT": 223, "QA": 126, "RO": 158, "RU": 1476, "RW": 5, "WS": 0, "ST": 0, "SA": 434, "SN": 12, "RS": 38, "SC": 0, "SL": 1, "SG": 217, "SK": 86, "SI": 46, "SB": 0, "ZA": 354, "ES": 1374, "LK": 48, "KN": 0, "LC": 1, "VC": 0, "SD": 65, "SR": 3, "SZ": 3, "SE": 444, "CH": 522, "SY": 59, "TW": 426, "TJ": 5, "TZ": 22, "TH": 312, "TL": 0, "TG": 3, "TO": 0, "TT": 21, "TN": 43, "TR": 729, "TM": 0, "UG": 17, "UA": 136, "AE": 239, "GB": 2258, "US": 4624, "UY": 40, "UZ": 37, "VU": 0, "VE": 285, "VN": 101, "YE": 30, "ZM": 15, "ZW": 5 },
+      		},
+      	});
+      	window.addEventListener("resize", () => {
+      		map.updateSize();
+      	});
+      });
+      // @formatter:off
+    </script>
+    <script>
+      // @formatter:off
+      document.addEventListener("DOMContentLoaded", function () {
+      	window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-activity'), {
+      		chart: {
+      			type: "radialBar",
+      			fontFamily: 'inherit',
+      			height: 40,
+      			width: 40,
+      			animations: {
+      				enabled: false
+      			},
+      			sparkline: {
+      				enabled: true
+      			},
+      		},
+      		tooltip: {
+      			enabled: false,
+      		},
+      		plotOptions: {
+      			radialBar: {
+      				hollow: {
+      					margin: 0,
+      					size: '75%'
+      				},
+      				track: {
+      					margin: 0
+      				},
+      				dataLabels: {
+      					show: false
+      				}
+      			}
+      		},
+      		colors: [tabler.getColor("blue")],
+      		series: [35],
+      	})).render();
+      });
+      // @formatter:on
+    </script>
+    <script>
+      // @formatter:off
+      document.addEventListener("DOMContentLoaded", function () {
+      	window.ApexCharts && (new ApexCharts(document.getElementById('chart-development-activity'), {
+      		chart: {
+      			type: "area",
+      			fontFamily: 'inherit',
+      			height: 192,
+      			sparkline: {
+      				enabled: true
+      			},
+      			animations: {
+      				enabled: false
+      			},
+      		},
+      		dataLabels: {
+      			enabled: false,
+      		},
+      		fill: {
+      			opacity: .16,
+      			type: 'solid'
+      		},
+      		stroke: {
+      			width: 2,
+      			lineCap: "round",
+      			curve: "smooth",
+      		},
+      		series: [{
+      			name: "Purchases",
+      			data: [3, 5, 4, 6, 7, 5, 6, 8, 24, 7, 12, 5, 6, 3, 8, 4, 14, 30, 17, 19, 15, 14, 25, 32, 40, 55, 60, 48, 52, 70]
+      		}],
+      		tooltip: {
+      			theme: 'dark'
+      		},
+      		grid: {
+      			strokeDashArray: 4,
+      		},
+      		xaxis: {
+      			labels: {
+      				padding: 0,
+      			},
+      			tooltip: {
+      				enabled: false
+      			},
+      			axisBorder: {
+      				show: false,
+      			},
+      			type: 'datetime',
+      		},
+      		yaxis: {
+      			labels: {
+      				padding: 4
+      			},
+      		},
+      		labels: [
+      			'2020-06-20', '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24', '2020-06-25', '2020-06-26', '2020-06-27', '2020-06-28', '2020-06-29', '2020-06-30', '2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-05', '2020-07-06', '2020-07-07', '2020-07-08', '2020-07-09', '2020-07-10', '2020-07-11', '2020-07-12', '2020-07-13', '2020-07-14', '2020-07-15', '2020-07-16', '2020-07-17', '2020-07-18', '2020-07-19'
+      		],
+      		colors: [tabler.getColor("primary")],
+      		legend: {
+      			show: false,
+      		},
+      		point: {
+      			show: false
+      		},
+      	})).render();
+      });
+      // @formatter:on
+    </script>
+    <script>
+      // @formatter:off
+      document.addEventListener("DOMContentLoaded", function () {
+      	window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-1'), {
+      		chart: {
+      			type: "line",
+      			fontFamily: 'inherit',
+      			height: 24,
+      			animations: {
+      				enabled: false
+      			},
+      			sparkline: {
+      				enabled: true
+      			},
+      		},
+      		tooltip: {
+      			enabled: false,
+      		},
+      		stroke: {
+      			width: 2,
+      			lineCap: "round",
+      		},
+      		series: [{
+      			color: tabler.getColor("primary"),
+      			data: [17, 24, 20, 10, 5, 1, 4, 18, 13]
+      		}],
+      	})).render();
+      });
+      // @formatter:on
+    </script>
+    <script>
+      // @formatter:off
+      document.addEventListener("DOMContentLoaded", function () {
+      	window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-2'), {
+      		chart: {
+      			type: "line",
+      			fontFamily: 'inherit',
+      			height: 24,
+      			animations: {
+      				enabled: false
+      			},
+      			sparkline: {
+      				enabled: true
+      			},
+      		},
+      		tooltip: {
+      			enabled: false,
+      		},
+      		stroke: {
+      			width: 2,
+      			lineCap: "round",
+      		},
+      		series: [{
+      			color: tabler.getColor("primary"),
+      			data: [13, 11, 19, 22, 12, 7, 14, 3, 21]
+      		}],
+      	})).render();
+      });
+      // @formatter:on
+    </script>
+    <script>
+      // @formatter:off
+      document.addEventListener("DOMContentLoaded", function () {
+      	window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-3'), {
+      		chart: {
+      			type: "line",
+      			fontFamily: 'inherit',
+      			height: 24,
+      			animations: {
+      				enabled: false
+      			},
+      			sparkline: {
+      				enabled: true
+      			},
+      		},
+      		tooltip: {
+      			enabled: false,
+      		},
+      		stroke: {
+      			width: 2,
+      			lineCap: "round",
+      		},
+      		series: [{
+      			color: tabler.getColor("primary"),
+      			data: [10, 13, 10, 4, 17, 3, 23, 22, 19]
+      		}],
+      	})).render();
+      });
+      // @formatter:on
+    </script>
+    <script>
+      // @formatter:off
+      document.addEventListener("DOMContentLoaded", function () {
+      	window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-4'), {
+      		chart: {
+      			type: "line",
+      			fontFamily: 'inherit',
+      			height: 24,
+      			animations: {
+      				enabled: false
+      			},
+      			sparkline: {
+      				enabled: true
+      			},
+      		},
+      		tooltip: {
+      			enabled: false,
+      		},
+      		stroke: {
+      			width: 2,
+      			lineCap: "round",
+      		},
+      		series: [{
+      			color: tabler.getColor("primary"),
+      			data: [6, 15, 13, 13, 5, 7, 17, 20, 19]
+      		}],
+      	})).render();
+      });
+      // @formatter:on
+    </script>
+    <script>
+      // @formatter:off
+      document.addEventListener("DOMContentLoaded", function () {
+      	window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-5'), {
+      		chart: {
+      			type: "line",
+      			fontFamily: 'inherit',
+      			height: 24,
+      			animations: {
+      				enabled: false
+      			},
+      			sparkline: {
+      				enabled: true
+      			},
+      		},
+      		tooltip: {
+      			enabled: false,
+      		},
+      		stroke: {
+      			width: 2,
+      			lineCap: "round",
+      		},
+      		series: [{
+      			color: tabler.getColor("primary"),
+      			data: [2, 11, 15, 14, 21, 20, 8, 23, 18, 14]
+      		}],
+      	})).render();
+      });
+      // @formatter:on
+    </script>
+    <script>
+      // @formatter:off
+      document.addEventListener("DOMContentLoaded", function () {
+      	window.ApexCharts && (new ApexCharts(document.getElementById('sparkline-bounce-rate-6'), {
+      		chart: {
+      			type: "line",
+      			fontFamily: 'inherit',
+      			height: 24,
+      			animations: {
+      				enabled: false
+      			},
+      			sparkline: {
+      				enabled: true
+      			},
+      		},
+      		tooltip: {
+      			enabled: false,
+      		},
+      		stroke: {
+      			width: 2,
+      			lineCap: "round",
+      		},
+      		series: [{
+      			color: tabler.getColor("primary"),
+      			data: [22, 12, 7, 14, 3, 21, 8, 23, 18, 14]
+      		}],
+      	})).render();
+      });
+      // @formatter:on
+    </script>
+  </body>
+</html>
