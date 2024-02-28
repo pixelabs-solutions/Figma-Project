@@ -45,9 +45,6 @@
         margin: 0px;
       }
       .side-navbar{
-        width: 20% !important;
-        background-color: #EFEFEF !important;
-
       }
       .side-nav-link{
         justify-content: flex-end !important;
@@ -81,6 +78,29 @@
 	font-size: 16px;
 	font-weight: 900;
 }
+@media (min-width: 992px) {
+    .md-w {
+        width: 80%;
+    }
+	.mq-t{
+		top:77px !important;
+        width: 20% !important;
+        background-color: #EFEFEF !important;
+	}
+	
+}
+@media (max-width: 991px) {
+	.mq-t{
+	background-color: inherit;
+	border: none !important;
+       /* width: 40px; */
+	   z-index: 10;
+	}
+	.md-w {
+        top: -60px !important;
+		position: relative;
+    }
+}
     </style>
   </head>
   <body >
@@ -100,7 +120,7 @@
 				</svg>
 				
 
-				Disconnecting from the system
+				<span class="d-none d-md-inline-flex">Disconnecting from the system</span>
 				
 		 </button>
 		  <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
@@ -114,12 +134,12 @@
   </header>
 
       <!-- Sidebar -->
-      <aside class="navbar side-navbar navbar-vertical navbar-right navbar-expand-lg border border-dark overflow-hidden" style="top:77px">
+      <aside class="navbar side-navbar navbar-vertical navbar-right navbar-expand-lg border border-lg-dark overflow-hidden mq-t" >
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"   aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu"  aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <h1 class="navbar-brand navbar-brand-autodark">
+          <h1 class="navbar-brand navbar-brand-autodark d-none d-lg-inline-flex">
             שם הת”ת: תורת אליהו
      
           </h1>
@@ -245,13 +265,13 @@
           </div>
         </div>
       </aside>
-      <div class="page-wrapper bg" style="width: 80%;">
+      <div class="page-wrapper bg col-12 md-w" >
         <!-- Page header -->
 	
-		  <header class="navbar-expand-md  w-100 border border-dark">
-			<div class="collapse navbar-collapse " id="navbar-menu">
+		  <header class="navbar-expand-sm  w-100 border border-dark">
+			<div class="" id="navbar-menu">
 			  <div class="navbar bg">
-				<div class="container-xl bg ">
+				<div class="container-xl bg ms-lg-0 ms-6">
 				 <button class="bg-white border-0 rounded">
 					<svg width="34" height="39" viewBox="0 0 34 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M17.0938 6.79416C17.7578 6.79416 19.3354 7.21406 19.3354 7.21406C23.6094 8.19347 26.6177 12.1302 26.6177 16.575V28.5386L27.4916 29.4165L28.2217 30.1499H5.77831L6.50844 29.4165L7.38228 28.5386V16.575C7.38228 12.1303 10.3906 8.19347 14.6646 7.21406C14.6646 7.21406 16.3561 6.79416 16.9062 6.79416M17 0C15.3498 0 14.0882 1.26731 14.0882 2.925V4.28991C8.55556 5.55769 4.38228 10.6275 4.38228 16.575V27.3L0.5 31.2V33.15H33.5V31.2L29.6177 27.3V16.575C29.6177 10.6275 25.4443 5.55769 19.9118 4.28991V2.925C19.9118 1.26731 18.6502 0 17 0ZM20.8823 35.1H13.1176C13.1176 37.2451 14.8645 39 17 39C19.1355 39 20.8823 37.2451 20.8823 35.1Z" fill="black"/>
@@ -260,7 +280,7 @@
 				 </button>
 				  <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
 					<div>
-						Welcome Moshe, to your personal area!
+						Welcome Moshe!
 					</div>
 				  </div>
 				</div>
@@ -365,8 +385,8 @@
 						  </div>
 						</div>
 					  </div>
-					  <div class="col-12 bg d-flex justify-content-between">
-						<div class="col-5 bg-white d-flex flex-column gap-2 p-2 br">
+					  <div class="col-12 bg d-flex flex-md-row align-items-start flex-column justify-content-between">
+						<div class="col-10 col-md-5 m-auto m-md-0 mb-2 bg-white d-flex flex-column gap-2 p-2 br">
 						<h5 class="text-end bld">Recent messages</h5>
 
 							<div class="card p-0 br bg border-0 ">
@@ -378,8 +398,8 @@
 											</svg>
 											
 									</span>
-									<p class="m-0"><span class="bld">Subject:</span> System error</p>
-									<p class="m-0"><span class="bld">Sender's name:</span> Chaim </p>
+									<p class="m-0 text-center text-md-start"><span class="bld">Subject:</span> System error</p>
+									<p class="m-0 text-center text-md-start"><span class="bld">Sender's name:</span> Chaim </p>
 								 </div>
                                 </div>
 							</div>
@@ -392,13 +412,13 @@
 											</svg>
 											
 									</span>
-									<p class="m-0"><span class="bld">Subject:</span> System error</p>
-									<p class="m-0"><span class="bld">Sender's name:</span> Chaim </p>
+									<p class="m-0 text-center text-md-start"><span class="bld">Subject:</span> System error</p>
+									<p class="m-0 text-center text-md-start"><span class="bld">Sender's name:</span> Chaim </p>
 								 </div>
                                 </div>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-10 col-md-3 m-auto mb-2">
 							<div class="card p-2 br">
 						<h5 class="text-end bld">Product order graph</h5>
 
@@ -407,7 +427,7 @@
 								</div>
 							  </div>
 						</div>
-						<div class="col-3">
+						<div class="col-10 col-md-3 m-auto mb-2">
 							<div class="card p-2 br">
 						<h5 class="text-end bld">Voucher types chart</h5>
 
